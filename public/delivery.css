@@ -1,0 +1,221 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.sidebar {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;  /* Ensure it sticks to the side */
+    width: 200px;
+}
+
+.sidebar h4 {
+    color: white;
+    margin-bottom: 30px;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.sidebar a:hover {
+    background-color: #575757;
+}
+
+/* Main content area */
+.main-content {
+    margin-left: 250px;  /* Sidebar width */
+    padding-left: 15px;
+    padding-right: 15px;
+    width: calc(100% - 250px); /* Content adjusts to the right of the sidebar */
+}
+
+/* Headings */
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+h4 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Form and Table Styling */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+textarea,
+select,
+button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+textarea,
+select {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Save Button Styling */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Button for Expense */
+button.btn-danger {
+    background-color: #f44336;
+}
+
+button.btn-danger:hover {
+    background-color: #e53935;
+}
+
+/* Delivery Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+td button {
+    background-color: #008CBA;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+td button:hover {
+    background-color: #007B9A;
+}
+
+td button.delete {
+    background-color: #f44336;
+}
+
+td button.delete:hover {
+    background-color: #e53935;
+}
+
+#deliveryList {
+    font-size: 16px;
+}
+
+/* Balance and Amount of Boxes */
+.row.mb-3 {
+    margin-bottom: 20px;
+}
+
+#balance,
+#boxesAvailable {
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+#transactionForm {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+#transactionForm label {
+    font-size: 16px;
+    color: #333;
+}
+
+#transactionForm textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+/* Income and Expense Buttons */
+#incomeBtn,
+#expenseBtn {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+#incomeBtn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#incomeBtn:hover {
+    background-color: #45a049;
+}
+
+#expenseBtn {
+    background-color: #f44336;
+    color: white;
+}
+
+#expenseBtn:hover {
+    background-color: #e53935;
+}
+
+/* Filter buttons (Recent, Month, View All) */
+button.view-filter-btn {
+    background: linear-gradient(to right, #ffb6c1, #f2a1d3, #e9e8e8);
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button.view-filter-btn:hover {
+    opacity: 0.8;
+}

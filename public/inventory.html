@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Dashboard</title>
+    <link rel="stylesheet" href="inventory.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h4 class="text-center text-white">Inventory Dashboard</h4>
+        <a href="home.html">Dashboard</a>
+        <a href="inventory.html">Inventory</a>
+        <a href="financials.html">Financials</a>
+        <a href="delivery.html">Delivery</a>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <h2>Inventory</h2>
+        
+        <!-- Search and Filter -->
+        <div class="row mb-3">
+            <div class="col-md-4">
+                <input type="text" id="searchInput" class="form-control" placeholder="Search Products">
+            </div>
+            <div class="col-md-2">
+                <select id="filterCategory" class="form-control">
+                    <option value="">Filter by Category</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-primary" id="addProductBtn">Add Product</button>
+            </div>
+        </div>
+
+        <!-- Inventory Table -->
+        <table class="table table-striped" id="inventoryTable">
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Quantity</th>
+                    <th>Price per Unit</th>
+                    <th>Threshold</th>
+                    <th>Supplier</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Inventory items will be populated here dynamically -->
+            </tbody>
+        </table>
+
+        <!-- Export Button -->
+        <button class="btn btn-success" id="exportBtn">Export to CSV</button>
+    </div>
+
+    <!-- Add/Edit Product Modal -->
+    <!-- Add/Edit Product Form Modal -->
+<div class="modal" id="addProductModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTitle">Add New Product</h5>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="productForm">
+                    <div class="form-group">
+                        <label for="productName">Product Name</label>
+                        <input type="text" id="productName" class="form-control form-control-lg" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="productCategory">Category</label>
+                        <input type="text" id="productCategory" class="form-control form-control-lg">
+                    </div>
+                    <div class="form-group">
+                        <label for="productQuantity">Quantity</label>
+                        <input type="number" id="productQuantity" class="form-control form-control-lg" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="productPrice">Price per Unit</label>
+                        <input type="number" id="productPrice" class="form-control form-control-lg" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="productThreshold">Stock Threshold</label>
+                        <input type="number" id="productThreshold" class="form-control form-control-lg" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="productSupplier">Supplier</label>
+                        <input type="text" id="productSupplier" class="form-control form-control-lg">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary" id="saveProductBtn">Save Product</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <script src="inventory.js"></script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #343a40;
+    color: white;
+    height: 100vh;
+    width: 250px;
+    padding-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.sidebar h4 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.sidebar a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.sidebar a:hover {
+    background-color: #575d63;
+    border-radius: 4px;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 250px;  /* Sidebar width */
+    padding-left: 15px;
+    padding-right: 15px;
+    width: calc(100% - 250px); /* Content adjusts to the right of the sidebar */
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #007bff;
+    color: white;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Button Styles */
+#exportBtn {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#exportBtn:hover {
+    background-color: #218838;
+}
+
+/* Modal Styles */
+.modal-dialog {
+    max-width: 700px;
+    margin: 30px auto;  /* Center the modal */
+}
+
+.modal-header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.modal-body {
+    padding: 30px;
+    background-color: #f9f9f9;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.form-control {
+    border-radius: 10px;
+    border: 1px solid #ced4da;
+    padding: 15px;
+    font-size: 1rem;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* Button Styling */
+#saveProductBtn, #closeModalBtn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+#saveProductBtn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+}
+
+#closeModalBtn {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+}
+
+#saveProductBtn:hover {
+    background-color: #218838;
+}
+
+#closeModalBtn:hover {
+    background-color: #5a6268;
+}
+
+/* Modal Button Layout */
+.modal-footer {
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none; /* Hide sidebar on small screens */
+    }
+
+    .main-content {
+        margin-left: 0; /* Adjust content when sidebar is hidden */
+    }
+}

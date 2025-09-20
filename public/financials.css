@@ -1,0 +1,207 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #343a40;
+    color: white;
+    height: 100vh;
+    width: 250px;
+    padding-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.sidebar h4 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.sidebar a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.sidebar a:hover {
+    background-color: #575d63;
+    border-radius: 4px;
+}
+.main-content {
+    margin-left: 250px;  /* Sidebar width */
+    padding-left: 15px;
+    padding-right: 15px;
+    width: calc(100% - 250px); /* Content adjusts to the right of the sidebar */
+}
+/* Main Container */
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Header */
+h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Balance Section */
+#balanceSection {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#balanceSection h3 {
+    font-size: 22px;
+    color: #17a2b8;
+}
+
+/* Transaction Form */
+#transactionForm {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+#transactionForm label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-top: 10px;
+}
+
+#transactionForm .form-control {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+#transactionForm button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+#transactionForm button:hover {
+    background-color: #218838;
+}
+
+/* Transaction History Table */
+#transactionHistory {
+    margin-top: 30px;
+}
+
+#transactionsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#transactionsTable th, #transactionsTable td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+#transactionsTable th {
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+}
+
+#transactionsTable td {
+    font-size: 14px;
+}
+
+#transactionsTable tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Transaction Buttons */
+button.edit-btn, button.delete-btn {
+    padding: 5px 10px;
+    margin-right: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button.edit-btn {
+    background-color: #ffc107;
+    color: white;
+}
+
+button.delete-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+button.edit-btn:hover {
+    background-color: #e0a800;
+}
+
+button.delete-btn:hover {
+    background-color: #c82333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    #transactionForm {
+        padding: 15px;
+    }
+
+    #transactionForm label, #transactionForm .form-control {
+        font-size: 14px;
+    }
+
+    #balanceSection h3 {
+        font-size: 20px;
+    }
+
+    #transactionsTable th, #transactionsTable td {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    #transactionForm button {
+        font-size: 14px;
+    }
+}

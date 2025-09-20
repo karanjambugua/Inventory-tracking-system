@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Dashboard</title>
+    <link rel="stylesheet" href="financials.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <div class="sidebar col-2">
+            <h4 class="text-center text-white">Inventory Dashboard</h4>
+            <a href="home.html">Dashboard</a>
+            <a href="inventory.html">Inventory</a>
+            <a href="financials.html">Financials</a>
+            <a href="delivery.html">Delivery</a>
+        </div>
+ <div class="main-content">
+        <!-- Financial Data and Transactions -->
+        <div class="container-fluid">
+            <h2>Financials</h2>
+
+            <!-- Balance and Amount of Boxes Available -->
+            <div class="row mb-3">
+                <div class="col-md-4">
+                    <h4>Balance: <span id="balance">Loading...</span></h4>
+                </div>
+                <div class="col-md-4">
+                    <h4>Amount of Boxes Available: <span id="boxesAvailable">Loading...</span></h4>
+                </div>
+            </div>
+
+            <!-- Income/Expense Buttons -->
+            <div class="row mb-3">
+                <div class="col-md-2">
+                    <button class="btn btn-success" id="incomeBtn">Income</button>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-danger" id="expenseBtn">Expense</button>
+                </div>
+            </div>
+
+            <!-- Add Transaction Form -->
+            <div id="transactionForm">
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" class="form-control" placeholder="Amount" required>
+                <label for="transactionType">Type:</label>
+                <select id="transactionType" class="form-control">
+                    <option value="Income">Income</option>
+                    <option value="Expense">Expense</option>
+                </select>
+                <label for="reason">Reason:</label>
+                <textarea id="reason" class="form-control" placeholder="Reason"></textarea>
+                <button class="btn btn-primary" id="saveTransactionBtn">Save Transaction</button>
+            </div>
+
+            <!-- Display Transactions -->
+            <table class="table table-striped" id="financialsTable">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>Type</th>
+                        <th>Details</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Transactions will be dynamically inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+    <script src="app.js"></script>
+</body>
+</html>

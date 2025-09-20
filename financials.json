@@ -1,0 +1,19 @@
+{
+  "balance": 1000,  
+  "transactions": [
+    {
+      "id": 1,
+      "type": "Income",
+      "amount": 500,
+      "date": "2023-09-05",
+      "details": "Payment for products sold"
+    },
+    {
+      "id": 2,
+      "type": "Expense",
+      "amount": 200,
+      "date": "2023-09-06",
+      "details": "Fuel purchase for the company car"
+    }
+  ]
+}

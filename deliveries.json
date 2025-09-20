@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "productName": "Product A",
+    "quantityDelivered": 50,
+    "deliveryStatus": "Completed",
+    "date": "09/01/2023",
+    "customerName": "John Doe",
+    "customerLocation": "Nairobi, Kenya",
+    "customerPhone": "+254712345678",
+    "notes": "Delivered on time, customer satisfied."
+  },
+  {
+    "id": 2,
+    "productName": "Product B",
+    "quantityDelivered": 30,
+    "deliveryStatus": "Pending",
+    "date": "09/05/2023",
+    "customerName": "Jane Smith",
+    "customerLocation": "Mombasa, Kenya",
+    "customerPhone": "+254798765432",
+    "notes": "Awaiting confirmation from customer."
+  },
+  {
+    "id": 3,
+    "productName": "Product C",
+    "quantityDelivered": 20,
+    "deliveryStatus": "Completed",
+    "date": "09/10/2023",
+    "customerName": "Samuel Ochieng",
+    "customerLocation": "Kisumu, Kenya",
+    "customerPhone": "+254701234567",
+    "notes": "Delivered successfully, customer requested additional stock."
+  },
+  {
+    "id": 4,
+    "productName": "Product D",
+    "quantityDelivered": 15,
+    "deliveryStatus": "Pending",
+    "date": "09/12/2023",
+    "customerName": "Mary Wambui",
+    "customerLocation": "Thika, Kenya",
+    "customerPhone": "+254704567890",
+    "notes": "Pending confirmation on the quantity."
+  },
+  {
+    "id": 5,
+    "productName": "Product E",
+    "quantityDelivered": 40,
+    "deliveryStatus": "Completed",
+    "date": "09/15/2023",
+    "customerName": "Alice Njeri",
+    "customerLocation": "Nakuru, Kenya",
+    "customerPhone": "+254712098765",
+    "notes": "Delivery made to warehouse."
+  }
+]
