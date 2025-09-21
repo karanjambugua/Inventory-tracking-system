@@ -12,12 +12,7 @@ body {
 }
 
 /* Sidebar */
-.sidebar {
-    background-color: #343a40;
-    color: white;
-    padding-top: 20px;
-    height: 100vh;
-}
+
 
 .sidebar h4 {
     text-align: center;
@@ -134,5 +129,31 @@ table tr:hover {
 
     .col-md-3 {
         margin-bottom: 20px;
+    }
+}
+/* Example CSS for a responsive sidebar */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        display: block;  /* Make sure the sidebar is visible on smaller screens */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 250px;
+        background-color: #333;
+        height: 100%;
+        z-index: 1000;
+    }
+
+    .sidebar a {
+        color: white;
+        padding: 8px;
+        text-decoration: none;
+        display: block;
+    }
+
+    /* Optionally, add some transition */
+    .sidebar a:hover {
+        background-color: #ddd;
+        color: black;
     }
 }
